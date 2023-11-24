@@ -1,0 +1,1 @@
+awk '{print $1}' <(pip list --outdated | awk 'NR > 2') | xargs -n1 pip install --upgrade

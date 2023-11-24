@@ -1,0 +1,1 @@
+pip list --outdated --format=json | jq -r '.[].name' | xargs -I{} pip install -U {}
